@@ -1,0 +1,13 @@
+import flet as ft
+
+def main(page: ft.Page):
+    page.title = "Flet App Example"
+
+    # Create simple UI
+    page.add(
+        ft.Text("Hello, welcome to my Flet app!", size=30),
+        ft.ElevatedButton("Click Me", on_click=lambda e: page.add(ft.Text("Button Clicked!")))
+    )
+
+# Run the app
+ft.app(target=main, view=ft.WEB_BROWSER)
